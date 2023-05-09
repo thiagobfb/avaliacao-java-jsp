@@ -4,8 +4,8 @@
 <html>
 <head>
     <title>Add Book</title>
-    <link href="<c:url value="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"> rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="<c:url value="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"> integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
 <c:if test="${addBookSuccess}">
@@ -27,9 +27,9 @@
             <div class="invalid-feedback" data-sb-feedback="nome:required">Nome is required.</div>
         </div>
         <div class="form-floating mb-3">
-            <form:input path="dataDeInicio" class="form-control" id="dataDeInicio" type="text" placeholder="Data de Início" data-sb-validations="required" />
-            <form:label path="dataDeInicio" for="dataDeInicio">Data de Início</form:label>
-            <div class="invalid-feedback" data-sb-feedback="dataDeInicio:required">Data de Início is required.</div>
+            <form:input path="dataInicio" class="form-control" id="dataInicio" type="text" placeholder="Data de Início" data-sb-validations="required" />
+            <form:label path="dataInicio" for="dataDeInicio">Data de Início</form:label>
+            <div class="invalid-feedback" data-sb-feedback="dataInicio:required">Data de Início is required.</div>
         </div>
         <div class="form-floating mb-3">
             <form:input path="gerenteResponsavel" class="form-control" id="gerenteResponsavel" type="text" placeholder="Gerente Responsável" data-sb-validations="required" />
@@ -37,13 +37,12 @@
             <div class="invalid-feedback" data-sb-feedback="gerenteResponsavel:required">Gerente Responsável is required.</div>
         </div>
         <div class="form-floating mb-3">
-            <form:input path="previsaoDeTermino" class="form-control" id="previsaoDeTermino" type="text" placeholder="Previsão de Término" data-sb-validations="required" />
-            <form:label path="previsaoDeTermino" for="previsaoDeTermino">Previsão de Término</form:label>
-            <div class="invalid-feedback" data-sb-feedback="previsaoDeTermino:required">Previsão de Término is required.</div>
+            <form:input path="previsaoTermino" class="form-control" id="previsaoTermino" type="text" placeholder="Previsão de Término" />
+            <form:label path="previsaoTermino" for="previsaoTermino">Previsão de Término</form:label>
         </div>
         <div class="form-floating mb-3">
-            <form:input path="dataDeTermino" class="form-control" id="dataDeTermino" type="text" placeholder="Data de Término" data-sb-validations="" />
-            <form:label path="dataDeTermino" for="dataDeTermino">Data de Término</form:label>
+            <form:input path="dataTermino" class="form-control" id="dataTermino" type="text" placeholder="Data de Término" data-sb-validations="" />
+            <form:label path="dataTermino" for="dataTermino">Data de Término</form:label>
         </div>
         <div class="form-floating mb-3">
             <form:input path="orcamentoTotal" class="form-control" id="orcamentoTotal" type="text" placeholder="Orçamento Total" data-sb-validations="required" />
@@ -51,9 +50,8 @@
             <div class="invalid-feedback" data-sb-feedback="orcamentoTotal:required">Orçamento Total is required.</div>
         </div>
         <div class="form-floating mb-3">
-            <form:textarea path="descricao" class="form-control" id="descricao" type="text" placeholder="Descrição" style="height: 10rem;" data-sb-validations="required"></form:textarea>
+            <form:textarea path="descricao" class="form-control" id="descricao" type="text" placeholder="Descrição" style="height: 10rem;"></form:textarea>
             <form:label path="descricao" for="descricao">Descrição</form:label>
-            <div class="invalid-feedback" data-sb-feedback="descricao:required">Descrição is required.</div>
         </div>
         <div class="form-floating mb-3">
             <form:select path="status" class="form-select" id="status" aria-label="Status">

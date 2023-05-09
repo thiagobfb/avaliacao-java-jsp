@@ -12,7 +12,7 @@ import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
-@Table(name = "PROJETO")
+@Table(name = "projeto")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,19 +21,19 @@ public class Projeto {
 
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "nome", nullable = false)
     private String nome;
 
-    @Column(name = "data-inicio")
+    @Column(name = "data_inicio")
     private LocalDate dataInicio;
 
-    @Column(name = "data-previsao-fim")
+    @Column(name = "data_previsao_fim")
     private LocalDate dataPrevisaoFim;
 
-    @Column(name = "data-fim")
+    @Column(name = "data_fim")
     private LocalDate dataFim;
 
     @Column(name = "descricao")

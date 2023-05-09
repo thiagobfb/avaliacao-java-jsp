@@ -35,6 +35,12 @@ public class ProjetoController {
         return redirectView;
     }
 
+    @GetMapping("/addProjeto")
+    public String addProjetoView(Model model) {
+        model.addAttribute("projeto", new Projeto());
+        return "add-projeto";
+    }
+
     @GetMapping(value = "/delete-projeto")
     public String deleteProjeto(@RequestParam long id) {
         service.deleteProjeto(id);

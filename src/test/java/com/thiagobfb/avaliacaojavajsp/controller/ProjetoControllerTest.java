@@ -42,10 +42,10 @@ public class ProjetoControllerTest {
     }
 
     @Test
-    public void whenAddBookView_thenReturnAddBooksView() throws Exception {
-        ResultActions addBookViewResult = mockMvc.perform(get("/book/addBook"));
+    public void whenAddProjetoView_thenReturnAddProjetoView() throws Exception {
+        ResultActions addBookViewResult = mockMvc.perform(get("/projeto/addProjeto"));
 
-        addBookViewResult.andExpect(view().name("add-book"))
+        addBookViewResult.andExpect(view().name("add-projeto"))
                 .andExpect(model().attribute("projeto", isA(Projeto.class)));
     }
 
@@ -54,7 +54,7 @@ public class ProjetoControllerTest {
         when(service.addProjeto(any(Projeto.class))).thenAnswer(AdditionalAnswers.returnsFirstArg());
         MockHttpServletRequestBuilder addProjetoRequest = MockMvcRequestBuilders.post("/projeto/addProjeto")
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-                .param("isbn", "isbn1")
+                .param("nome", "isbn1")
                 .param("name", "name1")
                 .param("author", "author1");
         ResultActions addBookResult = mockMvc.perform(addProjetoRequest);
